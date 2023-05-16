@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "title": "Torta de Chocolate",
+    "description": "Este es Torta de Chocolate",
+    "price": 100,
+    "code": "torta1",
+    "stock": 150,
+    "category": "comida"
+  },
+  {
+    "id": 2,
+    "title": "Torta Red Velvet",
+    "description": "Este Torta Red Velvet",
+    "price": 200,
+    "code": "torta2",
+    "stock": 550,
+    "category": "comida"
+  },
+  {
+    "id": 3,
+    "title": "Torta de Oreo",
+    "description": "Este es Torta de Oreo",
+    "price": 900,
+    "code": "torta3",
+    "stock": 50,
+    "category": "comida"
+  },
+  {
+    "id": 4,
+    "title": "Torta de Vainilla",
+    "description": "Este es Torta de Vainilla",
+    "price": 5900,
+    "code": "torta4",
+    "stock": 50,
+    "category": "comida",
+    "status": true
+  },
+  {
+    "id": 5,
+    "title": "Torta de Frutilla",
+    "description": "Este es Torta de Frutilla",
+    "price": 100,
+    "code": "torta5",
+    "stock": 150,
+    "category": "comida"
+  },
+  {
+    "id": 6,
+    "title": "ChocoTorta",
+    "description": "Este es ChocoTorta",
+    "price": 200,
+    "code": "torta6",
+    "stock": 550,
+    "category": "comida"
+  },
+  {
+    "id": 8,
+    "title": "Torta de Mandarina",
+    "description": "Este es Torta de Mandarina",
+    "price": 5900,
+    "code": "torta8",
+    "stock": 50,
+    "category": "comida"
+  },
+  {
+    "id": 10,
+    "title": "Torta de Anana",
+    "description": "Este es Torta de Anana",
+    "price": 5900,
+    "code": "torta10",
+    "stock": 50,
+    "category": "comida"
+  },
+  {
+    "id": 11,
+    "title": "Torta Alcualizado 07-34 pm",
+    "description": "Este es Alcualizado  07-34 pm",
+    "price": 800,
+    "code": "torta",
+    "stock": 150,
+    "category": "comida",
+    "status": true,
+    "thumbnails": []
+  },
+  {
+    "id": 12,
+    "title": "Torta Nueva 07_54 pm",
+    "description": "Este es Torta 07_54 pm",
+    "price": 900,
+    "code": "to",
+    "stock": 50,
+    "category": "comida",
+    "status": true,
+    "thumbnails": []
+  }
+]
