@@ -48,11 +48,16 @@ export class CartManager {
     if (!cart) {
       throw new Error(`Carrito con el ID ${cartId} no encontrado`);
     }
-    const existingProduct = cart.products.find(product => Number(product.id) === productId);
+    const existingProduct = cart.products.find(product => Number(product.id) === Number(productId));
     if (existingProduct) {
-      existingProduct.quantity += quantity;
+      if (quantity) {
+        existingProduct.quantity += quantity;
+      } else {
+        existingProduct.quantity += 1;
+      }
     } else {
-      cart.products.push({ id: productId, quantity });
+      const newProduct = { id: Number(productId), quantity: quantity || 1 };
+      cart.products.push(newProduct);
     }
     await this.saveCarts(carts);
     return cart;

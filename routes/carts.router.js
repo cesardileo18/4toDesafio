@@ -4,12 +4,10 @@ import { CartManager } from '../CartManager.js';
 const router = express.Router();
 const cartManager = new CartManager('./db/carts.json');
 
-// POST /api/carts/
-router.post('/', async (req, res) => {
-  const newCart = await cartManager.createCart();
-  res.status(201).json(newCart);
+router.get('/', async (req, res) => {
+  const newCart = await cartManager.getCarts();
+  res.status(200).json(newCart);
 });
-
 // GET /api/carts/:cid
 router.get('/:cid', async (req, res) => {
   const { cid } = req.params;
@@ -20,11 +18,15 @@ router.get('/:cid', async (req, res) => {
     res.json(cart);
   }
 });
+//GET /api/carts/
+router.post('/', async (req, res) => {
+  const newCart = await cartManager.createCart();
+  res.status(201).json(newCart);
+});
 // POST /api/carts/:cid/product/:pid
 router.post('/:cid/product/:pid', async (req, res) => {
   const { cid, pid } = req.params
   const { quantity } = req.body || 1;
-
   try {
     const updatedCart = await cartManager.addProductToCart(cid, pid, quantity);
     res.json(updatedCart);
@@ -32,5 +34,4 @@ router.post('/:cid/product/:pid', async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
-
 export default router;
